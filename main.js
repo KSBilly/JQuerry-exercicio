@@ -3,33 +3,29 @@ const text = document.getElementById("text");
 let indice = 0
 
 $(document).ready(function(){
-    $("#btn").click(function(){
-        //adcionar validação para o campo input
+    $("#btn").click(function(e){
+        e.preventDefault();
 
         const vTarefa = tarefa.value;
+
+        if (vTarefa.trim () !==""){
+
         ++indice
 
-        $("#conteudo").append(`<div id="${indice}">
+        $("#conteudo").append(`<div id="${indice}" class="tarefa-item">
             <div class="tarefa"> ${vTarefa }</div>
-            <button type="button" class="del" onclick="deletar(${indice})">Deletar</button>
+            <button type="button" class="del">Deletar</button>
         </div>`);
+        } else {
+            alert ("Por favor, Preencha o campo TAREFA")
+        }
     });
 
-    $(".tarefa").click(function(){
+    $("#conteudo").on("click", ".tarefa", function(){
         $(this).toggleClass("concluida");
     });
 
-    //adcionar preventeDefault
-    
-    function deletar(id){
-        let delet = document.getElementById(id);
-        delet.remove();
-    }
+        $("#conteudo").on("click", ".del", function (){
+            $(this).closest(".tarefa-item").remove();
+        });
 });
-
-
-
-$(".del").click(function(){
-    let teste = document.getElementById()
-    teste.remove();
-    })

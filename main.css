@@ -1,7 +1,48 @@
 .tarefa{
-    background-color: gray;
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 4px;
+    text-align: left;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    color: rgb(71, 71, 71);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#btn{
+    background-color: rgb(255, 228, 56);
+    color: black;
+    border-style: none;
+}
+
+input{
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding: 9px;
+    border-style: none;
+}
+
+button{
+    padding: 11px;
+    margin-bottom: 4px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: red;
+    font-weight: bold;
+    color: white;
+    border-style: none;
 }
 
 .concluida{
-    background-color: green;
+    background-color: rgb(140, 255, 140);
+}
+
+.container {
+    display: block;
+    background-color: rgb(209, 209, 209);
+    max-width: 800px;
+    text-align: center;
 }
